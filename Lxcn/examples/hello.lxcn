@@ -1,0 +1,38 @@
+# Lxcn - Hello World
+console.log("Hello World!")
+
+# Variables
+int age = 20
+double price = 24.99
+char grade = 'A'
+string userName = "Code123"
+bool isActive = true
+
+ver unknownType = 2
+unknownType = "2"
+
+var unknownType2 = 3
+unknownType2 = "3"
+
+const var surname = "Doe"
+int optionalAge? = none
+
+# Type casting and checking
+var num = 5
+console.log((int) 2)
+console.log(num == (int))
+
+# Conditions
+if num == 5 then
+    console.log(num)
+elseif num == (int) then
+    console.log("num is an integer")
+else then
+    console.log(`{num} isnt working on both situations!`)
+end
+
+===
+for loop(int i = 2, i < 6, i++) do
+
+end
+===

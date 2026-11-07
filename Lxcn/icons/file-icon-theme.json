@@ -1,0 +1,12 @@
+{
+  "iconDefinitions": {
+    "_lxcn": {
+      "iconPath": "./lxcn.png"
+    }
+  },
+  "fileExtensions": {
+    "lx": "_lxcn",
+    "lxc": "_lxcn",
+    "lxcn": "_lxcn"
+  }
+}

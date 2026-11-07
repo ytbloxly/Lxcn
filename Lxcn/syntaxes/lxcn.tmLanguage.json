@@ -1,0 +1,130 @@
+{
+  "scopeName": "source.lxcn",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.lxcn",
+          "match": "#.*$"
+        },
+        {
+          "name": "comment.block.lxcn",
+          "begin": "^\\s*===\\s*$",
+          "end": "^\\s*===\\s*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.template.lxcn",
+          "begin": "`",
+          "end": "`",
+          "patterns": [
+            {
+              "name": "constant.character.escape.lxcn",
+              "match": "\\\\."
+            },
+            {
+              "name": "variable.other.lxcn",
+              "match": "\\{[^}]+\\}"
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.double.lxcn",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.lxcn",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.lxcn",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.lxcn",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.lxcn",
+          "match": "\\b(if|elseif|else|then|end|for|loop|do|break|continue)\\b"
+        },
+        {
+          "name": "keyword.declaration.lxcn",
+          "match": "\\b(ver|var|const)\\b"
+        },
+        {
+          "name": "constant.language.lxcn",
+          "match": "\\b(true|false|none)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.lxcn",
+          "match": "\\b(int|double|char|string|bool)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.lxcn",
+          "match": "\\b(console\\.log)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.lxcn",
+          "match": "\\b\\d+(\\.\\d+)?\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.lxcn",
+          "match": "\\+\\+|--|==|!=|<=|>=|&&|\\|\\||[+*/%<>=!\\-]"
+        }
+      ]
+    }
+  }
+}

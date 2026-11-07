@@ -1,0 +1,66 @@
+{
+  "name": "lxcn-language",
+  "displayName": "Lxcn Language",
+  "description": "Language support and runner for Lxcn (Lexicon).",
+  "version": "0.1.0",
+  "publisher": "lxcn",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./extension.js",
+  "icon": "icons/lxcn.png",
+  "activationEvents": [
+    "onLanguage:lxcn",
+    "onCommand:lxcn.runFile"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "lxcn",
+        "aliases": [
+          "Lxcn",
+          "lxcn"
+        ],
+        "extensions": [
+          ".lx",
+          ".lxc",
+          ".lxcn"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "lxcn",
+        "scopeName": "source.lxcn",
+        "path": "./syntaxes/lxcn.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "lxcn.runFile",
+        "title": "Lxcn: Run Current File",
+        "icon": "$(play)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "lxcn.runFile",
+          "when": "resourceLangId == lxcn",
+          "group": "navigation"
+        }
+      ]
+    },
+    "iconThemes": [
+      {
+        "id": "lxcn-file-icons",
+        "label": "Lxcn File Icons",
+        "path": "./icons/file-icon-theme.json"
+      }
+    ]
+  }
+}
